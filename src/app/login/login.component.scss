@@ -1,0 +1,29 @@
+.wannalog {
+    width: 80vw;
+    position: fixed;
+    left: 10vw;
+    top: 45vh;
+
+    .mat-toolbar {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.g_signin_center{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .g_id_signin iframe {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 100%;
+    color-scheme: normal;
+    background-color: black;
+    margin: 0 auto;
+}
