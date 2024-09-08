@@ -9,7 +9,7 @@ import { UserService } from '../core/services/user.service'
   styleUrl: './personal.component.scss'
 })
 export class PersonalComponent implements OnInit {
-  user:User = new User () ;
+  user: User = new User () ;
   isLoggedIn = false ;
 
   constructor() { }
