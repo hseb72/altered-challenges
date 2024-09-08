@@ -57,10 +57,10 @@ export class UserService {
   }
 
   isAdmin (id: string) {
-    return this.http.get(`${this.serviceApiUrl}/${id}/isAdmin`);
+    return this.http.get(`${this.SrvApiUrl}/${id}/isAdmin`);
   }
 
   getUserStats (id: string) {
-    return this.http.get(`${this.serviceApiUrl}/${id}/stat`);
+    return this.http.get(`${this.SrvApiUrl}/${id}/stat`);
   }
 }

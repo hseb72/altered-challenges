@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -88,6 +88,7 @@ import { FriendComponent } from './friend/friend.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { NewsComponent } from './news/news.component';
+//  import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,15 @@ import { NewsComponent } from './news/news.component';
     ReactiveFormsModule,
     SocialLoginModule,
     GoogleSigninButtonModule,
-  ],
+/*
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+   }),
+*/
+],
   providers: [
     provideAnimationsAsync(),
     provideHttpClient(),
