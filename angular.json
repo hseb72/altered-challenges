@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "altered-challenges:build:production"
+              "buildTarget": "altered-challenges:build:production"
             },
             "development": {
-              "browserTarget": "altered-challenges:build:development"
+              "buildTarget": "altered-challenges:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "altered-challenges:build"
+            "buildTarget": "altered-challenges:build"
           }
         },
         "test": {
@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "altered-challenges"
+  "defaultProject": "altered-challenges",
+  "cli": {
+    "analytics": false
+  }
 }
