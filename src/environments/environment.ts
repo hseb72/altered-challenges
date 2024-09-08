@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://altered-challenges-re7.crealcs.com/'
+  apiUrl: 'https://altered-challenges-re7.crealcs.com/api'
 };
 
 /*
