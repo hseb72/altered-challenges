@@ -4,9 +4,10 @@ import { User } from '../core/models/user'
 import { UserService } from '../core/services/user.service'
 
 @Component({
-  selector: 'app-friend',
-  templateUrl: './friend.component.html',
-  styleUrls: ['./friend.component.scss']
+    selector: 'app-friend',
+    templateUrl: './friend.component.html',
+    styleUrls: ['./friend.component.scss'],
+    standalone: false
 })
 export class FriendComponent implements OnInit {
   user:User = new User () ;

@@ -4,9 +4,10 @@ import { User } from '../core/models/user'
 import { UserService } from '../core/services/user.service'
 
 @Component({
-  selector: 'app-challenge',
-  templateUrl: './challenge.component.html',
-  styleUrls: ['./challenge.component.scss']
+    selector: 'app-challenge',
+    templateUrl: './challenge.component.html',
+    styleUrls: ['./challenge.component.scss'],
+    standalone: false
 })
 export class ChallengeComponent implements OnInit {
   user:User = new User () ;
