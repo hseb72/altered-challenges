@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { MatButtonModule } from '@angular/material/button' ;
 import { MatIconModule } from '@angular/material/icon' ;
@@ -7,6 +7,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+import { User } from '../core/models/user'
 
 const uiModules = [
   MatSidenavModule,
@@ -25,7 +27,9 @@ const uiModules = [
     standalone: false
 })
 export class HeaderComponent implements OnInit {
-  
+  @Input() isLoggedIn: boolean = false;
+  @Input() user: User = new User ();
+
   /*
   ** Things to make in start now
   ** To delete or adapt later

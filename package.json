@@ -25,6 +25,7 @@
     "angular": "^1.6.10",
     "http": "^0.0.1-security",
     "material": "^0.9.15",
+    "ngx-scanner-qrcode": "^1.7.6",
     "npm": "^10.8.3",
     "tslib": "^2.3.0",
     "zone.js": "^0.15.1"

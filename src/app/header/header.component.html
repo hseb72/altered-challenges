@@ -19,10 +19,14 @@
 
     <mat-sidenav-container (click)="sidenav.toggle(); andMore()" class="sidenav-container {{ isMenuOpen ? 'expanded' : 'shrinked' }}">
         <mat-sidenav #sidenav autoFocus="false" mode="over" [(opened)]="isMenuOpen" class="sidenav">
-        <a mat-button routerLink="/challenge" color="accent"><mat-icon>map</mat-icon> Mes défis</a>
-        <a mat-button routerLink="/friends" color="accent"><mat-icon>person</mat-icon> Mes ami.e.s </a>
-        <a mat-button routerLink="/personal"><mat-icon>person_pin</mat-icon> Mes données personnelles</a>
-        <a mat-button routerLink="/logout" color="accent"><mat-icon>logout</mat-icon> Déconnexion</a>
-    </mat-sidenav>
-  </mat-sidenav-container>
+            @if ( isLoggedIn ) {
+                <a mat-button routerLink="/challenge" color="accent"><mat-icon>map</mat-icon> Mes défis</a>
+                <a mat-button routerLink="/friends" color="accent"><mat-icon>person</mat-icon> Mes ami.e.s </a>
+                <a mat-button routerLink="/personal"><mat-icon>person_pin</mat-icon> Mes données personnelles</a>
+                <a mat-button routerLink="/logout" color="accent"><mat-icon>logout</mat-icon> Déconnexion</a>
+            } @else {
+                <a mat-button routerLink="/login" color="accent"><mat-icon>login</mat-icon> Connexion</a>
+            }
+        </mat-sidenav>
+    </mat-sidenav-container>
 </header>

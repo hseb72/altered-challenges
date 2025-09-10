@@ -88,6 +88,7 @@ import { FriendComponent } from './friend/friend.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { NewsComponent } from './news/news.component';
+import { CardComponent } from './card/card.component';
 //  import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -100,7 +101,8 @@ import { NewsComponent } from './news/news.component';
     FriendComponent,
     PersonalComponent,
     ChallengeComponent,
-    NewsComponent
+    NewsComponent,
+    CardComponent
   ],
   imports: [
     uiModules,
