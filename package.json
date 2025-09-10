@@ -26,23 +26,23 @@
     "http": "^0.0.1-security",
     "material": "^0.9.15",
     "npm": "^10.8.3",
-    "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "^0.15.1"
   },
   "devDependencies": {
-    "@angular/build": "^20.2.2",
+    "@angular/build": "^20.1.6",
     "@angular/cli": "^20.2.2",
     "@angular/compiler-cli": "^20.2.4",
     "@angular/localize": "^20.2.4",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.10.0",
-    "karma": "~6.3.0",
+    "karma": "^6.4.4",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "rxjs": "^6.6.7",
     "typescript": "^5.9.2"
   }
 }

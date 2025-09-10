@@ -129,7 +129,7 @@ import { NewsComponent } from './news/news.component';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('497387296496-92inc3c9oqnmtbjok3u40fbo4pl1h163.apps.googleusercontent.com', {oneTapEnabled: false}),
+            provider: new GoogleLoginProvider('899960514737-vcujfss4hlcu13mocnuh46kvitl6a3qq.apps.googleusercontent.com', {oneTapEnabled: false}),
           },
           {
             id: FacebookLoginProvider.PROVIDER_ID,
