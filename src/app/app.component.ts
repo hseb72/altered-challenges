@@ -13,7 +13,7 @@ import { AuthenticationService } from './core/services/authentication.service';
 export class AppComponent {
   title = 'altered-challenges';
 
-  isLoggedin: boolean = false;
+  isLoggedIn: boolean = false;
   user: User = new User (); ;
   queryParams: any;
 }
