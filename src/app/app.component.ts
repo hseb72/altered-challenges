@@ -16,4 +16,15 @@ export class AppComponent {
   isLoggedIn: boolean = false;
   user: User = new User (); ;
   queryParams: any;
+
+  constructor(
+    private authService: AuthenticationService, 
+    private route: ActivatedRoute) {
+      var tmpSower = this . authService . getCurrentUser () 
+      if ( tmpSower != null ) {
+        this . user = JSON . parse ( tmpSower ) ;
+        this . isLoggedIn = true ;
+      } else this . user . id = 0 ;
+  }
 }
+
