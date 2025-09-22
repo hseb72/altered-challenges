@@ -1,7 +1,7 @@
 import { Component, Input, NgModule } from '@angular/core';
 import { AuthenticationService } from '../core/services/authentication.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Alter } from '../core/models/alter'
+import { User } from '../core/models/user'
 import {
   SocialAuthService,
   FacebookLoginProvider,
@@ -17,13 +17,11 @@ import {
 })
 
 export class LoginComponent {
-  user: Alter = new Alter (); ;
   logged: boolean = false;
   loginreq: boolean = false;
 
-  @Input() givenCode: string = '';
-  @Input() alter: string = '';
-  @Input() isLoggedin: boolean = false;
+  @Input() user: User = new User (); ;
+  @Input() isLoggedIn: boolean = false;
   
   loading: boolean = false;
   error: string  = '' ;
@@ -46,7 +44,7 @@ export class LoginComponent {
     
     this.socialAuthService.authState.subscribe((user) => {
       this.socialUser = user;
-      this.isLoggedin = user != null;
+      this.isLoggedIn = user != null;
       console.log(this.socialUser);
       this.localAuthent (user) ;
     });

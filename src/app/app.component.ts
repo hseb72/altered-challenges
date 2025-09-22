@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Alter } from './core/models/alter'
+import { User } from './core/models/user'
 
 import { ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from './core/services/authentication.service';
@@ -14,6 +14,6 @@ export class AppComponent {
   title = 'altered-challenges';
 
   isLoggedin: boolean = false;
-  user: Alter = new Alter (); ;
+  user: User = new User (); ;
   queryParams: any;
 }

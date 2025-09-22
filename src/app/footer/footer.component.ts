@@ -10,12 +10,11 @@ import { UserService } from '../core/services/user.service'
 })
 
 export class FooterComponent implements OnInit {
+  @Input() user: User = new User (); ;
   @Input() isLoggedIn: boolean = false;
-  @Input() givenCode: string = '';
-  @Input() user: User = new User ();
 
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 
