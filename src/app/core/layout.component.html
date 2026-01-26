@@ -1,0 +1,53 @@
+<!-- HEADER -->
+<header class="top-header">
+  <button class="hamburger" (click)="toggleMenu()">☰</button>
+
+  <!-- DESKTOP -->
+  <nav class="desktop-shortcuts">
+    <a routerLink="/collection" routerLinkActive="active">Cartes</a>
+    <a routerLink="/deck" routerLinkActive="active">Deck</a>
+    <a routerLink="/fight" routerLinkActive="active">Combat</a>
+    <a routerLink="/spirits" routerLinkActive="active">Esprits</a>
+    <a routerLink="/profile" routerLinkActive="active">Profil</a>
+  </nav>
+
+</header>
+
+<!-- SIDE MENU -->
+<aside class="side-menu" [class.open]="menuOpen">
+  <h2>Clairière</h2>
+<ul>
+  <li routerLink="/collection" (click)="toggleMenu()">Collection</li>
+  <li routerLink="/deck" (click)="toggleMenu()">Decks</li>
+  <li routerLink="/fight" (click)="toggleMenu()">Combat</li>
+  <li routerLink="/spirits" (click)="toggleMenu()">Esprits</li>
+  <li routerLink="/profile" (click)="toggleMenu()">Mon Profil</li>
+</ul>
+</aside>
+
+<!-- OVERLAY -->
+<div class="overlay" *ngIf="menuOpen" (click)="toggleMenu()"></div>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- MOBILE BAR -->
+<footer class="mobile-bar">
+  <a routerLink="/collection" routerLinkActive="active">
+    <img src="assets/icons/cards.svg" alt="Stylized fan of game cards with a central emblem representing a cards collection; flat icon used in a mobile navigation bar, accompanying label Cartes; neutral and functional tone" />Cartes
+  </a>
+  <a routerLink="/deck" routerLinkActive="active">
+    <img src="assets/icons/deck.svg" alt="Stylized fanned deck of cards with a central emblem representing a card deck; flat icon in a mobile navigation bar labeled Deck; neutral and functional tone" />Deck
+  </a>
+  <a routerLink="/fight" routerLinkActive="active">
+    <img src="assets/icons/fight.svg" alt="Crossed swords over a central shield representing combat; swords angled in an X behind the shield, stylized flat icon on a neutral background; no text in the image; tone is assertive and combative" />Combat
+  </a>
+  <a routerLink="/spirits" routerLinkActive="active">
+    <img src="assets/icons/spirits.svg" alt="Two ethereal spirit figures hovering side by side with soft glowing edges, gently drifting as if in a misty forest clearing; minimal neutral background with faint wisps; no text; tone serene and mysterious" />Esprits
+  </a>
+  <a routerLink="/profile" routerLinkActive="active">
+    <img src="assets/icons/profile.svg" alt="Stylized user avatar silhouette centered inside a circular badge representing a personal profile or account; simple flat graphic on a neutral background; used in the mobile navigation bar next to the visible label Profil; tone approachable and neutral" />Profil
+  </a>
+</footer>

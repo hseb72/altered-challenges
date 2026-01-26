@@ -55,6 +55,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 
+import { CollectionComponent } from './collection/collection.component';
+
 const uiModules = [
   A11yModule,
   MatBadgeModule,
@@ -102,7 +104,8 @@ import { CardComponent } from './card/card.component';
     PersonalComponent,
     ChallengeComponent,
     NewsComponent,
-    CardComponent
+    CardComponent,
+    CollectionComponent
   ],
   imports: [
     uiModules,

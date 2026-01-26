@@ -1,0 +1,135 @@
+/* HEADER */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(31, 61, 43, 0.9), transparent);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 10;
+}
+
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+}
+
+/* DESKTOP SHORTCUTS */
+.desktop-shortcuts {
+  margin-left: auto;
+  display: none;
+
+  button {
+    margin-left: 12px;
+    background: var(--fog);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+  }
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: rgba(31, 61, 43, 0.95);
+  padding: 24px;
+  transition: left 0.3s ease;
+  z-index: 20;
+
+  &.open {
+    left: 0;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(214, 195, 138, 0.3);
+      cursor: pointer;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 15;
+}
+
+/* CONTENT */
+.content {
+  padding: 80px 16px 100px;
+}
+
+/* MOBILE BAR */
+.mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: rgba(31, 61, 43, 0.95);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+
+  button {
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      margin-bottom: 4px;
+      filter: invert(80%);
+    }
+  }
+}
+
+.mobile-bar img {
+  filter:
+    drop-shadow(0 0 4px rgba(214,195,138,0.4))
+    brightness(1.1);
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .desktop-shortcuts {
+    display: block;
+  }
+
+  .mobile-bar {
+    display: none;
+  }
+
+  .content {
+    padding-bottom: 32px;
+  }
+}

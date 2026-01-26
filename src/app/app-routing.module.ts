@@ -8,12 +8,29 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 
+import { LayoutComponent } from './core/Layout.component';
+import { CollectionComponent } from './collection/collection.component';
+
 import { PersonalComponent } from './personal/personal.component';
 import { FriendComponent } from './friend/friend.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },
+//  { path: '', component: HomeComponent, pathMatch: 'full' },
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      { path: '', redirectTo: 'collection', pathMatch: 'full' },
+      { path: 'collection', component: CollectionComponent }
+      /*,
+      { path: 'deck', component: DeckComponent },
+      { path: 'fight', component: FightComponent },
+      { path: 'spirits', component: SpiritsComponent },
+      { path: 'profile', component: ProfileComponent }
+       */
+    ]
+  },
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'login',  component: LoginComponent },
   { path: 'personal',  component: PersonalComponent, canActivate: [authGuard] },
